@@ -1,6 +1,7 @@
 #! /env/bin/python
 
 import pdb
+from pprint import pprint
 
 id_counter = 1
 
@@ -13,7 +14,7 @@ class Base(object):
 
 	def JSON(self):
 		data = { getName(self) : self.__dict__ }
-		print(data)
+		return data
 
 class TestClass(Base):
 	def __init__(self):
@@ -64,25 +65,18 @@ def relation(relationType):
 
 
 def getName(classObject):
-	# it's an object
-	#right = ""
-	#left = ""
-	#if classObject.__name__.find(" object at "):
-	#	right = ' '
-	#	left = '.'
-	#else:
 
 	right = "'"
 	left = '.'
 
 	try :
-		start = classObject.__class__.rfind(right)
-		end = classObject.__class__.rfind(left)
-		#return classObject.__class__
-		return classObject.__class__[start:end]
+		string = str(classObject.__class__)
+		start = string.rfind(left) + 1
+		end = string.rfind(right)
+		return string[start:end]
 	except:
 		try :
-			return classObject.__class__
+			return str(classObject.__class__)
 		except:
 			return "NA"
 
@@ -106,7 +100,8 @@ def run():
 			
 	print len(classInstances), " - RESULTS:"
 	for t in classInstances:
-		t.JSON()
+		pprint(t.JSON())
+		print "---"
 
 classInstances = []
 
@@ -114,7 +109,7 @@ classInstances = []
 ##############################################
 
 
-classTypes = [RelationTest, TestClass]
+classTypes = [TestClass, RelationTest]
 
 # do the magic
 run()
