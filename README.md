@@ -16,7 +16,7 @@ OR
 
 1. Create the class in 'Types', ensure this is at the top of the file:
 
---
+```
 #! /env/bin/python
 
 from base import Base
@@ -26,7 +26,7 @@ class TestClass(Base):
 		Base.__init__(self, classTypes, classInstances)
 	
 		## your defines go below
---
+```
 
 and below that add class members
 2. To add a relation to an existing class use the generateRelation. 
