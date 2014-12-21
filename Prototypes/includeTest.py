@@ -1,4 +1,4 @@
-#! /env/bin/python
+#!/usr/bin/python
 
 import os, sys, pdb
 from types import ClassType

@@ -17,7 +17,7 @@ OR
 - Create the class in 'Types', ensure this is at the top of the file:
 
 ```
-#! /env/bin/python
+#!/usr/bin/python
 
 from base import Base
 

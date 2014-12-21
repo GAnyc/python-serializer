@@ -1,4 +1,4 @@
-#! /env/bin/python
+#!/usr/bin/python
 
 id_counter = 1
 

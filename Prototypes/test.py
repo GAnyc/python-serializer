@@ -1,4 +1,4 @@
-#! /env/bin/python
+#!/usr/bin/python
 
 import pdb
 from pprint import pprint

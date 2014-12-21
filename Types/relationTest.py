@@ -1,4 +1,4 @@
-#! /env/bin/python
+#!/usr/bin/python
 
 from testClass import TestClass
 from base import Base
