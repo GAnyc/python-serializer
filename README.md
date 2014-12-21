@@ -14,7 +14,7 @@ OR
 
 ### ADDING CLASSES ###
 
-1. Create the class in 'Types', ensure this is at the top of the file:
+- Create the class in 'Types', ensure this is at the top of the file:
 
 ```
 #! /env/bin/python
@@ -26,15 +26,13 @@ class TestClass(Base):
 		Base.__init__(self, classTypes, classInstances)
 	
 		## your defines go below
+		... now add class members
 ```
 
-and below that add class members
-2. To add a relation to an existing class use the generateRelation. 
+- To add a relation to an existing class use the generateRelation. 
    Take a look at relationTest.py for an example
 
 
-3. In 'generator.py' update includeTypes to include the file name 
+- In 'generator.py' update includeTypes to include the file name 
    and class name
-
-
 
